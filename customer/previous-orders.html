@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previous Orders</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation bar here -->
+
+    <div class="container mt-4">
+        <h1 class="mb-4">Previous Orders</h1>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Order ID</th>
+                    <th scope="col">Total Price</th>
+                    <th scope="col">Order Date</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Details</th>
+                </tr>
+            </thead>
+            <tbody id="orders-list">
+                <!-- Orders will be dynamically loaded here -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script to dynamically load orders
+    <script>
+        // Example data - replace this with your actual data source
+        const orders = [
+            {
+                orderId: 1,
+                totalPrice: "35.99",
+                orderDate: "2023-01-03 14:22:11",
+                status: "Delivered"
+            },
+            // ... more orders ...
+        ];
+
+        // Function to create an order row
+        function createOrderRow(order) {
+            return `
+                <tr>
+                    <th scope="row">\${order.orderId}</th>
+                    <td>\$\${order.totalPrice}</td>
+                    <td>\${new Date(order.orderDate).toLocaleString()}</td>
+                    <td>\${order.status}</td>
+                    <td><a href="order-details.html?orderId=\${order.orderId}" class="btn btn-primary btn-sm">View</a></td>
+                </tr>
+            `;
+        }
+
+        // Get the orders list container
+        const ordersListContainer = document.getElementById('orders-list');
+
+        // Generate order rows and insert them into the container
+        orders.forEach(order => {
+            ordersListContainer.innerHTML += createOrderRow(order);
+        });
+    </script> -->
+</body>
+</html>
